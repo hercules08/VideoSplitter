@@ -9,16 +9,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace VideoSplitter
+namespace VideoSplitter.Desktop
 {
     /// <summary>
-    /// Interaction logic for WindowSplittingVideo.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class WindowSplittingVideo : Window
+    public partial class Shell : Window
     {
-        public WindowSplittingVideo()
+        public Shell()
         {
             InitializeComponent();
         }

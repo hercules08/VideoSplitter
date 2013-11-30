@@ -12,27 +12,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Emgu.CV;
-using Emgu.CV.CvEnum;
-using System.Windows.Forms;
+using WF = System.Windows.Forms;
 
-namespace VideoSplitter
+namespace VideoSplitter.Module.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomeView : UserControl
     {
         string videoFilename;
         string outputDirectory;
 
-        public MainWindow()
+        public HomeView()
         {
             InitializeComponent();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            IntPtr image = CvInvoke.cvCreateImage(new System.Drawing.Size(400, 300), Emgu.CV.CvEnum.IPL_DEPTH.IPL_DEPTH_8U, 1);
+            //IntPtr image = CvInvoke.cvCreateImage(new System.Drawing.Size(400, 300), Emgu.CV.CvEnum.IPL_DEPTH.IPL_DEPTH_8U, 1);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -50,8 +49,8 @@ namespace VideoSplitter
             {
                 videoFilename = fileDialog.FileName;
 
-                var folderDialog = new FolderBrowserDialog();
-                DialogResult folderResult = folderDialog.ShowDialog();
+                var folderDialog = new WF.FolderBrowserDialog();
+                WF.DialogResult folderResult = folderDialog.ShowDialog();
 
 
                 if (folderResult == System.Windows.Forms.DialogResult.OK)
@@ -59,8 +58,8 @@ namespace VideoSplitter
                     outputDirectory = folderDialog.SelectedPath;
 
                     //Split video
-                    WindowSplittingVideo splittingWindow = new WindowSplittingVideo();
-                    splittingWindow.Show();
+                    VideoSplittingView splittingWindow = new VideoSplittingView();
+                    //splittingWindow.Show();
 
                     Capture capture = new Capture(videoFilename);
 
@@ -77,7 +76,7 @@ namespace VideoSplitter
 
                     }
 
-                    splittingWindow.Close();
+                    //splittingWindow.Close();
 
                     System.Diagnostics.Process prc = new System.Diagnostics.Process();
                     prc.StartInfo.FileName = outputDirectory;
