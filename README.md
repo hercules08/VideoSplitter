@@ -3,8 +3,8 @@ VideoSplitter
 
 .NET and EmguCV application for splitting, modifying and reassembling video
 
-Site - [http://50.137.137.79/VideoSplitter](http://50.137.137.79/VideoSplitter)
+Site - [http://damolaomotosho.com/Software/VideoSplitter/publish.htm](http://damolaomotosho.com/Software/VideoSplitter/publish.htm)
 
-Usage - [How to use](http://50.137.137.79/VideoSplitter/VideoSplitter_Usage.pdf)
+Usage - [How to use](http://damolaomotosho.com/Software/VideoSplitter/VideoSplitter_Usage.pdf)
 
-[ClickOnce Install Link](http://50.137.137.79/VideoSplitter/VideoSplitter.application)
+[ClickOnce Install Link](http://damolaomotosho.com/Software/VideoSplitter/VideoSplitter.Desktop.application)
